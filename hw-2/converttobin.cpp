@@ -7,6 +7,13 @@ int main() {
     int n;
     cout << "Enter your number that the programm will convert to the binary system: ";
     cin >> num;
+    bool isNegative = false;
+    if (num < 0)
+    {
+        isNegative = true;
+        num = abs(num);
+    }
+    
     cout << "Enter a number for printing out decimal: ";
     cin >> n;
     cout << endl;
@@ -40,12 +47,17 @@ int main() {
         }
     }
     
-    cout << "The whole part in binary system is: ";
+    cout << "The number in binary system is: ";
+    if (isNegative)
+    {
+        cout << "-";
+    }
+    
     for (int i = wholeArr.size()-1; i >= 0; i--)
     {
         cout << wholeArr[i];
     }
-    cout << "\nThe decimal part in binary system is: ";
+    cout << ".";
     for (int i = 0; i < decimalArr.size(); i++)
     {
         cout << decimalArr[i];
