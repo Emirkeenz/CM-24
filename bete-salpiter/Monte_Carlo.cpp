@@ -11,11 +11,12 @@ int main() {
     int k = 0;
     long long n = 100000000;
     do {
-        long double r = (b - a) * (((double)(rand() % RAND_MAX) + 1) / RAND_MAX) + a;
+        long double r = (b - a) * ((double) rand() / RAND_MAX) + a;
         f = sin(r);
-        I += f*r;
+        I += f;
         k++;
     } while (k <= n);
-    cout << "Значение интеграла: " << I/k << endl;
+    I *= (b - a) / n;
+    cout << "Значение интеграла: " << I << endl;
     return 0;
 }
