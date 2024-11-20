@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     int n = 0;
-    double i = 1;
+    long double i = 1;
     do
     {
         if (i*2 == i) break;
